@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6608386058566092983
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6608386058566092981}
+  - component: {fileID: 6608386058566092980}
+  - component: {fileID: 6608386058566092986}
+  - component: {fileID: 6608386058566092987}
+  - component: {fileID: 6608386058566092984}
+  m_Layer: 0
+  m_Name: Scripts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6608386058566092981
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6608386058566092983}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.140252, y: -3.4956994, z: -0.6253872}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6608386058566092980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6608386058566092983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168b33646b6bb874f9f6ef1efc11c9c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseMin: {x: 0, y: 0, z: 0}
+  baseMax: {x: 0, y: 0, z: 0}
+--- !u!114 &6608386058566092986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6608386058566092983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab98d53e65300145b1156694fdf654e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentPrefab: {fileID: 8814367371637551897, guid: 1b792ba8597e9d649a6b03e9f501ed5b, type: 3}
+  agentsParrent: {fileID: 0}
+  minTimeToSpawn: 2
+  maxTimeToSpawn: 3
+  maxAgentsOnBoard: 30
+  agentsOnBoard: []
+--- !u!114 &6608386058566092987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6608386058566092983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69ea5e03368961b4fbd2a8abc7d3617a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnAgentsManager: {fileID: 6608386058566092986}
+--- !u!114 &6608386058566092984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6608386058566092983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47462e593eb6f745a60f2e192cc18e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxSelection: {fileID: 0}
+  agentsStatusPrefab: {fileID: 7558829914784128549, guid: ca54c389619a62b4a9ed9f912d0192f8, type: 3}
+  contentPanel: {fileID: 0}
+  spawnedViev: []
+  agentsSelectedList: []
