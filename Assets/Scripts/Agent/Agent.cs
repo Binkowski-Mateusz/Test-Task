@@ -86,7 +86,6 @@ public class Agent : MonoBehaviour
    
     private void DestroyAgent()
     {
-        // MediatorController.Instance.RemoveAgent(this.GetComponent<Agent>());
         wasDestroyed = true;
         Destroy(this.gameObject);
     }

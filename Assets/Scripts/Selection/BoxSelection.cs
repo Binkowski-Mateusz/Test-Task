@@ -6,9 +6,11 @@ public class BoxSelection : MonoBehaviour
 {
     [SerializeField] Collider[] selections;
     [SerializeField] Box box;
+
     private Vector3 startPosition, dragPosition;
     private Camera cam;
     private Ray ray;
+
     public List<Agent> agentsSelected;
     public bool wasChanged = false;
 
@@ -84,7 +86,7 @@ public class BoxSelection : MonoBehaviour
     }
     public List<Agent> GetSelectedList()
     {
-            List<Agent> agentsList = new List<Agent>();
+        List<Agent> agentsList = new List<Agent>();
         if(agentsSelected.Count > 1)
         {
             agentsList.Add(agentsSelected[0]);
@@ -93,7 +95,7 @@ public class BoxSelection : MonoBehaviour
                 agentsList.Add(agentsSelected[counter]);
             }
         }
-            return agentsList;
+        return agentsList;
     }
 }
 
