@@ -6,6 +6,7 @@ public class Agent : MonoBehaviour
 {
     [SerializeField] private GameObject selectedPlane;
     [SerializeField] private Rigidbody agentRigidBody;
+
     private int lifePoints = 3;
     private float timer = 0;
     private float timeToChangeDirection = 0.5f;
@@ -13,6 +14,8 @@ public class Agent : MonoBehaviour
 
     private bool wasHit;
     private float timerHit;
+    private bool wasDestroyed;
+
 
     private void Update()
     {
@@ -55,9 +58,17 @@ public class Agent : MonoBehaviour
         }
     }
 
+    public int GetLifePoints()
+    {
+        return lifePoints;
+    }
+
     public void Selected(bool select)
     {
-        selectedPlane.SetActive(select);
+        if(!wasDestroyed)
+        {
+            selectedPlane.SetActive(select);
+        }
     }
 
     private void RemoveLife()
@@ -75,7 +86,8 @@ public class Agent : MonoBehaviour
    
     private void DestroyAgent()
     {
-       // MediatorController.Instance.RemoveAgent(this.GetComponent<Agent>());
+        // MediatorController.Instance.RemoveAgent(this.GetComponent<Agent>());
+        wasDestroyed = true;
         Destroy(this.gameObject);
     }
 

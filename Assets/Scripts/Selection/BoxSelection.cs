@@ -9,7 +9,8 @@ public class BoxSelection : MonoBehaviour
     private Vector3 startPosition, dragPosition;
     private Camera cam;
     private Ray ray;
-    private List<Agent> agentsSelected;
+    public List<Agent> agentsSelected;
+    public bool wasChanged = false;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class BoxSelection : MonoBehaviour
         if(Input.GetMouseButton(0))
         {
             DoSelectedBoxFromMouse();
+            wasChanged = true;
         }
         else if(Input.GetMouseButtonUp(0))
         {
@@ -79,6 +81,19 @@ public class BoxSelection : MonoBehaviour
         Gizmos.color = Color.green;
 
         Gizmos.DrawWireCube(box.Center, box.Size);
+    }
+    public List<Agent> GetSelectedList()
+    {
+            List<Agent> agentsList = new List<Agent>();
+        if(agentsSelected.Count > 1)
+        {
+            agentsList.Add(agentsSelected[0]);
+            for (int counter = 2; counter < agentsSelected.Count; counter = counter + 2)
+            {
+                agentsList.Add(agentsSelected[counter]);
+            }
+        }
+            return agentsList;
     }
 }
 
