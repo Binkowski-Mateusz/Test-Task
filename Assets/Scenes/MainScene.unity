@@ -391,6 +391,7 @@ GameObject:
   - component: {fileID: 1274130071}
   - component: {fileID: 1274130070}
   - component: {fileID: 1274130072}
+  - component: {fileID: 1274130073}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -441,8 +442,22 @@ MonoBehaviour:
   agentPrefab: {fileID: 8814367371637551897, guid: 1b792ba8597e9d649a6b03e9f501ed5b, type: 3}
   agentsParrent: {fileID: 1427557271}
   minTimeToSpawn: 2
-  maxTimeToSpawn: 10
+  maxTimeToSpawn: 3
   maxAgentsOnBoard: 30
+  agentsOnBoard: []
+--- !u!114 &1274130073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274130069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69ea5e03368961b4fbd2a8abc7d3617a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnAgentsManager: {fileID: 1274130072}
 --- !u!1 &1427557270
 GameObject:
   m_ObjectHideFlags: 0

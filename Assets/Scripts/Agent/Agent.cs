@@ -49,7 +49,6 @@ public class Agent : MonoBehaviour
         if(other.tag == "Agent" && !wasHit)
         {
             HitAgent();
-            Debug.Log("Hit Agent");
         }else
         {
             Direction();
@@ -73,8 +72,10 @@ public class Agent : MonoBehaviour
         }
     }
 
+   
     private void DestroyAgent()
     {
+       // MediatorController.Instance.RemoveAgent(this.GetComponent<Agent>());
         Destroy(this.gameObject);
     }
 

@@ -13,7 +13,7 @@ public class SpawnAgentsManager : MonoBehaviour
     private float timeToSpawnAgent;
     private float timer = 0;
     private Vector3 spawn;
-    private List<Agent> agentsOnBoard;
+    public List<Agent> agentsOnBoard;
 
     void Start()
     {
@@ -27,6 +27,7 @@ public class SpawnAgentsManager : MonoBehaviour
     void Update()
     {
         timer = timer + Time.deltaTime;
+        RemoveDestroyedAgentsFromList();
         if (timer > timeToSpawnAgent)
         {
             if(agentsOnBoard.Count < maxAgentsOnBoard)
@@ -46,5 +47,14 @@ public class SpawnAgentsManager : MonoBehaviour
     {
         timer = 0;
         return Random.Range(minTimeToSpawn, maxTimeToSpawn);
+    }
+
+    public void RemoveAgentFromList(Agent agent)
+    {
+        agentsOnBoard.Remove(agent);
+    }
+    private void RemoveDestroyedAgentsFromList()
+    {
+        agentsOnBoard.RemoveAll(agent => agent == null);
     }
 }
